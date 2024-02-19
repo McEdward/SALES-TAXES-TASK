@@ -9,7 +9,7 @@ class SalesTaxes:
         self.inputs = []
         self.output = []
         self.categories = {
-            'exclusions': {'chocolate', 'medicine', 'pills', 'book'},
+            'exclusions': {'chocolate', 'medicine', 'pills', 'book', 'coffee'},
             'import': {'import'}
         }
         self.taxrate = {
@@ -47,16 +47,13 @@ class SalesTaxes:
                 
                 if not any(exc in name.lower() for exc in self.categories['exclusions']):
                     product_tax += price * self.taxrate['basic']
-                    print(name)
                 total += price
                 price += product_tax
                 tax += product_tax
                 price = float('{:0.2f}'.format(price))
-                output.append("{} {}: {}\n".format(quantity, name, price))
+                output.append("{} {}: {:0.2f}\n".format(quantity, name, price))
 
 
-
-                print(name, ': ', price, quantity)
             tax = round(round_nearest(tax, 0.05),2)
             total += tax
             output.append("Sales Taxes: {:0.2f}\n".format(tax))

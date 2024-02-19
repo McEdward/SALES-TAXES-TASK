@@ -1,0 +1,13 @@
+Input 1:
+1 mug at 7.99
+2 bags of ground coffee at 9.75
+1 cough medicine at 29.99
+
+Input 2:
+3 imported rolls of duct tape at 4.50
+1 imported toolbox at 29.99
+
+Input 3:
+2 t-shirts at 12.99
+1 pair of jeans at 24.95
+4 pairs of sunglasses at 5.50

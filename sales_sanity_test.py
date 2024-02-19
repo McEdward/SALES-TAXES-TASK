@@ -11,7 +11,17 @@ class TestSales(unittest.TestCase):
         expected_output = "output/expected1.txt"
         self.assertListEqual(list(open(output_file)), list(open(expected_output)))
     
+    def test_input2(self):
+        input_file = "inputs/demo2.txt"
+        output_file = "output/actual2.txt"
+        ST = SalesTaxes()
+        ST.getInputFile(input_file)
+        ST.processInput()
+        ST.dumpOutput(output_file)
+        expected_output = "output/expected2.txt"
+        self.assertListEqual(list(open(output_file)), list(open(expected_output)))
     
+
 
 
 if __name__ == '__main__':
